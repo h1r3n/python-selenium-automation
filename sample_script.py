@@ -10,7 +10,9 @@ driver_path = ChromeDriverManager().install()
 # create a new Chrome browser instance
 service = Service(driver_path)
 driver = webdriver.Chrome(service=service)
-driver.maximize_window()
+# Set window size by specifying width and height
+driver.set_window_size(800, 600)  # Width, Height in pixels# Set window size by specifying width and height
+driver.set_window_size(800, 600)  # Width, Height in pixels
 
 # open the url
 driver.get('https://www.google.com/')
